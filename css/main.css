@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+  --webkit-size-scrollbar: 7px;
+  width: var(--webkit-size-scrollbar);
+  height: var(--webkit-size-scrollbar);
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #1a1917;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ffb548;
+}
+
+*::-moz-selection {
+  background: #ffb548;
+  color: #1a1917;
+}
+
+*::selection {
+  background: #ffb548;
+  color: #1a1917;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  background-color: #1a1917;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  height: inherit;
+}
+
+.button {
+  background: #ffb548;
+  padding: 18px;
+  color: #1a1917;
+  border-radius: 4px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  margin-bottom: 999px;
+  background: radial-gradient(189.96% 61.18% at 50% 38.82%, rgba(255, 181, 72, 0) 0%, rgba(52, 44, 29, 0.8) 73.22%, #08090a 99.74%), url("../../assets/path/to/image/header/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.header__top {
+  height: 70px;
+}
+.header__top--inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo > .header__logo--img {
+  height: 55px;
+  width: 55px;
+}
+.header__nav {
+  height: 100%;
+}
+.header__list {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.header__item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.header__item:not(:last-child) {
+  margin-right: 22px;
+}
+.header__link {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  line-height: 2.5rem;
+  color: #d9d9d9;
+  transition: color 0.3s ease-in-out;
+}
+.header__link:hover {
+  color: #ffb548;
+}
+.header__controls {
+  display: flex;
+  gap: 25px;
+}
+.header__language {
+  cursor: pointer;
+  width: 77px;
+  background: transparent;
+  border: none;
+  outline: none;
+  position: relative;
+  border-right: 0.5px solid rgba(255, 255, 255, 0.3490196078);
+  color: #d9d9d9;
+}
+.header__language > option {
+  color: #1a1917;
+}
+.header__gaming-services {
+  display: flex;
+  gap: 18px;
+}
+.header__xbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__steam {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #d9d9d9;
+}
+.header__title {
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  font-size: 80px;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 7px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.header__subtext {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.header__btn {
+  transition: box-shadow 0.2s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.header__btn:hover {
+  box-shadow: 0 0 10px #ffb548, 0 0 20px #ffb548, 0 0 30px #ffb548;
+}
+.header__text {
+  display: inline-block;
+  position: relative;
+}
+.header__text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 0.5px;
+  height: 100%;
+  background: #1a1917;
+}
+.header__cost {
+  margin-left: 15px;
+}
+.header__buttom {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 90px;
+}
+.header__scroll-down-btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+.header__scroll-down-btn:hover .header__scroll-down--ico {
+  animation-play-state: paused;
+}
+.header__scroll-down--text {
+  margin-bottom: 10px;
+  color: #d9d9d9;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.header__scroll-down--ico {
+  animation: srollDownBtn 1s ease-in-out infinite;
+}
+
+@keyframes srollDownBtn {
+  0% {
+    transform: translateY(-30%);
+  }
+  100% {
+    transform: translateY(30%);
+  }
+}

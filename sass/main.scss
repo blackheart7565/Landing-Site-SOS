@@ -1,4 +1,13 @@
-@import './base/reset';
-@import './base/vars';
+//~~
 
-@import './block/header';
+// Base
+@import './base/vars';
+@import './base/reset';
+@import './base/scroll';
+@import './base/base';
+
+// Block
+@import './block//header';
+
+// Animation
+@import './animation/header/index';

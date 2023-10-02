@@ -1,0 +1,200 @@
+//~~
+
+.header {
+	$self: &;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	margin-bottom: 999px;
+	background: radial-gradient(
+			189.96% 61.18% at 50% 38.82%,
+			rgba(255, 181, 72, 0) 0%,
+			rgba(52, 44, 29, 0.8) 73.22%,
+			#08090a 99.74%
+		),
+		url($header-background-img);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	// .header__top
+	&__top {
+		height: 70px;
+	}
+	// .header__top--inner
+	&__top--inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .header__logo
+	&__logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& > &--img {
+			height: 55px;
+			width: 55px;
+		}
+	}
+	// .header__nav
+	&__nav {
+		height: 100%;
+	}
+	// .header__list
+	&__list {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+	// .header__item
+	&__item {
+		display: flex;
+		align-items: center;
+		height: 100%;
+
+		&:not(:last-child) {
+			margin-right: 22px;
+		}
+	}
+	// .header__link
+	&__link {
+		font-size: $header-menu-size;
+		text-transform: uppercase;
+		letter-spacing: 1.2px;
+		line-height: 2.5rem;
+		color: $secondary-color;
+		transition: color 0.3s ease-in-out;
+
+		&:hover {
+			color: $accent-color;
+		}
+	}
+	// .header__controls
+	&__controls {
+		display: flex;
+		gap: 25px;
+	}
+	// .header__language
+	&__language {
+		cursor: pointer;
+		width: 77px;
+		background: transparent;
+		border: none;
+		outline: none;
+		position: relative;
+		border-right: 0.5px solid #ffffff59;
+		color: $secondary-color;
+
+		& > option {
+			color: $main-color;
+		}
+	}
+	// .header__gaming-services
+	&__gaming-services {
+		display: flex;
+		gap: 18px;
+	}
+	// .header__xbox
+	&__xbox {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .header__xbox-ico
+	&__xbox-ico {
+	}
+	// .header__steam
+	&__steam {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .header__steam-ico
+	&__steam-ico {
+	}
+	// .header__center
+	&__center {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: $secondary-color;
+	}
+	// .header__title
+	&__title {
+		margin-bottom: 7px;
+		text-transform: uppercase;
+		font-size: $title-size;
+		font-family: $font-famaly-bebas-neue;
+		letter-spacing: 7px;
+		user-select: none;
+	}
+	// .header__subtext
+	&__subtext {
+		text-transform: uppercase;
+		font-size: $subtext-size;
+		font-family: $font-famaly-bebas-neue;
+		letter-spacing: 4px;
+		margin-bottom: 30px;
+		user-select: none;
+	}
+	// .header__btn
+	&__btn {
+		transition: box-shadow 0.2s ease-in-out;
+		user-select: none;
+
+		&:hover {
+			box-shadow: 0 0 10px $accent-color, 0 0 20px $accent-color,
+				0 0 30px $accent-color;
+		}
+	}
+	// .header__text
+	&__text {
+		display: inline-block;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: -10px;
+			width: 0.5px;
+			height: 100%;
+			background: $main-color;
+		}
+	}
+	// .header__cost
+	&__cost {
+		margin-left: 15px;
+	}
+	// .header__buttom
+	&__buttom {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		height: 90px;
+	}
+	// .header__scroll-down-btn
+	&__scroll-down-btn {
+		cursor: pointer;
+		background: transparent;
+		border: none;
+
+		&:hover #{$self}__scroll-down--ico {
+			animation-play-state: paused;
+		}
+	}
+	// .header__scroll-down--text
+	&__scroll-down--text {
+		margin-bottom: 10px;
+		color: $secondary-color;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: $header-menu-size;
+	}
+	// .header__scroll-down--ico
+	&__scroll-down--ico {
+		animation: srollDownBtn 1s ease-in-out infinite;
+	}
+}

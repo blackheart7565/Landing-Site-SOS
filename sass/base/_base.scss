@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@700&display=swap');
+
+*::selection {
+	background: $accent-color;
+	color: $main-color;
+}
+
+body {
+	font-family: $font-famaly-open-sans;
+	font-size: $default-size;
+	background-color: $main-color;
+	scroll-behavior: smooth;
+}
+
+.container {
+	max-width: 1200px;
+	margin-inline: auto;
+	height: inherit;
+}
+
+.button {
+	background: $accent-color;
+	padding: 18px;
+	color: $main-color;
+	border-radius: 4px;
+}
