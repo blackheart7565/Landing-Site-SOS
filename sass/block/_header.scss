@@ -6,7 +6,6 @@
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100vh;
-	margin-bottom: 999px;
 	background: radial-gradient(
 			189.96% 61.18% at 50% 38.82%,
 			rgba(255, 181, 72, 0) 0%,
@@ -101,6 +100,14 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		background: transparent;
+		border-radius: 50%;
+		transition: box-shadow 0.2s ease-in-out;
+
+		&:hover {
+			box-shadow: 0 0 10px $accent-color;
+			filter: contrast(110%);
+		}
 	}
 	// .header__xbox-ico
 	&__xbox-ico {
@@ -110,6 +117,14 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		background: transparent;
+		border-radius: 50%;
+		transition: box-shadow 0.2s ease-in-out;
+
+		&:hover {
+			box-shadow: 0 0 10px $accent-color;
+			filter: contrast(110%);
+		}
 	}
 	// .header__steam-ico
 	&__steam-ico {

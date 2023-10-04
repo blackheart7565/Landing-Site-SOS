@@ -1,0 +1,41 @@
+//~~
+
+.features {
+	height: 100vh;
+	background: radial-gradient(
+			81.01% 53.57% at 30.85% 53.65%,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(0, 0, 0, 0) 19.2%,
+			rgba(4, 5, 6, 0.52) 47.48%,
+			#080a0b 99.74%
+		),
+		url($feature-background-img);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	// .features__spoiler
+	&__spoiler {
+	}
+	// .features__header
+	&__header {
+	}
+	// .features__subtext
+	&__subtext {
+	}
+	// .features__title
+	&__title {
+	}
+	// .features__content
+	&__content {
+	}
+	// .features__spoiler-item
+	&__spoiler-item {
+	}
+	// .features__spoiler-title
+	&__spoiler-title {
+	}
+	// .features__spoiler-text
+	&__spoiler-text {
+	}
+}

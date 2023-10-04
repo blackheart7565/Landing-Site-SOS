@@ -69,7 +69,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  margin-bottom: 999px;
   background: radial-gradient(189.96% 61.18% at 50% 38.82%, rgba(255, 181, 72, 0) 0%, rgba(52, 44, 29, 0.8) 73.22%, #08090a 99.74%), url("../../assets/path/to/image/header/header-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -144,11 +143,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: transparent;
+  border-radius: 50%;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.header__xbox:hover {
+  box-shadow: 0 0 10px #ffb548;
+  filter: contrast(110%);
 }
 .header__steam {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: transparent;
+  border-radius: 50%;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.header__steam:hover {
+  box-shadow: 0 0 10px #ffb548;
+  filter: contrast(110%);
 }
 .header__center {
   display: flex;
@@ -226,6 +239,13 @@ body {
   animation: srollDownBtn 1s ease-in-out infinite;
 }
 
+.features {
+  height: 100vh;
+  background: radial-gradient(81.01% 53.57% at 30.85% 53.65%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 19.2%, rgba(4, 5, 6, 0.52) 47.48%, #080a0b 99.74%), url("../../assets/path//to/image/main/features/features-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 @keyframes srollDownBtn {
   0% {
     transform: translateY(-30%);
@@ -233,4 +253,7 @@ body {
   100% {
     transform: translateY(30%);
   }
+}
+.off {
+  display: none;
 }
