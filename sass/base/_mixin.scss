@@ -1,0 +1,6 @@
+//~~
+
+// transition
+@mixin transition($selector, $delay: 0.2s) {
+	transition: $selector $delay ease-in-out;
+}

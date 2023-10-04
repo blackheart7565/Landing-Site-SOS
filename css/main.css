@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -49,6 +50,7 @@ body {
   font-size: 18px;
   background-color: #1a1917;
   scroll-behavior: smooth;
+  font-weight: 400;
 }
 
 .container {
@@ -240,12 +242,95 @@ body {
 }
 
 .features {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   height: 100vh;
   background: radial-gradient(81.01% 53.57% at 30.85% 53.65%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 19.2%, rgba(4, 5, 6, 0.52) 47.48%, #080a0b 99.74%), url("../../assets/path//to/image/main/features/features-bg.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 30%;
   background-size: cover;
 }
+.features__wrapper {
+  position: absolute;
+  width: 400px;
+  height: 430px;
+  margin-right: 17%;
+}
+.features__header {
+  margin-bottom: 40px;
+}
+.features__subtext {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  color: #d9d9d9;
+}
+.features__title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 80px;
+  color: #d9d9d9;
+  letter-spacing: 3px;
+}
+.features__item {
+  cursor: pointer;
+  position: relative;
+}
+.features__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.features__item:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -30px;
+  transform: translateY(-50%);
+  border: 1px solid #d9d9d9;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transition: background 0.2s ease-in-out;
+}
+.features__item:after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: -24px;
+  height: 0;
+  width: 2px;
+  background: #fff;
+  transition: height 0.5s ease-in-out;
+}
+.features__item.active:before {
+  background: #d9d9d9;
+}
+.features__item.active .features__spoiler-text {
+  grid-template-rows: 1fr;
+}
+.features__item.active:after {
+  height: 100%;
+}
+.features__item.active:last-child:after {
+  height: 80%;
+}
+.features__spoiler-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+  color: #ffb548;
+  letter-spacing: 2px;
+  font-weight: 400;
+  position: relative;
+}
+.features__spoiler-text {
+  display: grid;
+  grid-template-rows: 0fr;
+  color: #d9d9d9;
+  overflow: hidden;
+  transition: grid-template-rows 0.3s ease-in-out;
+}
+.features__spoiler-text > p {
+  min-height: 0;
+}
+
 @keyframes srollDownBtn {
   0% {
     transform: translateY(-30%);

@@ -1,6 +1,10 @@
 //~~
 
 .features {
+	$self: &;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 	height: 100vh;
 	background: radial-gradient(
 			81.01% 53.57% at 30.85% 53.65%,
@@ -11,31 +15,102 @@
 		),
 		url($feature-background-img);
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: 30%;
 	background-size: cover;
 
-	// .features__spoiler
-	&__spoiler {
+	// .features__wrapper
+	&__wrapper {
+		position: absolute;
+		width: 400px;
+		height: 430px;
+		margin-right: 17%;
 	}
 	// .features__header
 	&__header {
+		margin-bottom: 40px;
 	}
 	// .features__subtext
 	&__subtext {
+		font-family: $font-famaly-bebas-neue;
+		font-size: $subtext-size;
+		color: $secondary-color;
 	}
 	// .features__title
 	&__title {
+		font-family: $font-famaly-bebas-neue;
+		font-size: $title-size;
+		color: $secondary-color;
+		letter-spacing: 3px;
 	}
 	// .features__content
 	&__content {
 	}
-	// .features__spoiler-item
-	&__spoiler-item {
+	// .features__spoiler
+	&__spoiler {
+	}
+	// .features__item
+	&__item {
+		cursor: pointer;
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 20px;
+			left: -30px;
+			transform: translateY(-50%);
+			border: 1px solid $secondary-color;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			@include transition(background);
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 30px;
+			left: -24px;
+			height: 0;
+			width: 2px;
+			background: #fff;
+			@include transition(height, 0.5s);
+		}
+		&.active:before {
+			background: $secondary-color;
+		}
+		&.active #{$self}__spoiler-text {
+			grid-template-rows: 1fr;
+		}
+		&.active:after {
+			height: 100%;
+		}
+		&.active:last-child:after {
+			height: 80%;
+		}
 	}
 	// .features__spoiler-title
 	&__spoiler-title {
+		font-family: $font-famaly-bebas-neue;
+		font-size: $spoiler-title-size;
+		color: $accent-color;
+		letter-spacing: 2px;
+		font-weight: 400;
+		position: relative;
 	}
 	// .features__spoiler-text
 	&__spoiler-text {
+		display: grid;
+		grid-template-rows: 0fr;
+		color: $secondary-color;
+		overflow: hidden;
+		@include transition(grid-template-rows, 0.3s);
+
+		& > p {
+			min-height: 0;
+		}
 	}
 }
