@@ -1,0 +1,70 @@
+//~~
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+
+	@include mainBackground(
+		$gallery-background-img,
+		radial-gradient(
+			136.03% 54.57% at 50% 48.04%,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(0, 0, 0, 0) 60.63%,
+			#080a0b 99.74%
+		)
+	);
+
+	// .gallery__left
+	&__left {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		right: -15%;
+	}
+	// .gallery__header
+	&__header {
+	}
+	// .gallery__subtext
+	&__subtext {
+		font-family: $font-famaly-bebas-neue;
+		font-size: $subtext-size;
+		color: $secondary-color;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+	// .gallery__title
+	&__title {
+		font-family: $font-famaly-bebas-neue;
+		font-size: $title-size;
+		color: $secondary-color;
+		font-weight: 400;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+	}
+	// .gallery__line
+	&__line {
+		width: 800px;
+		position: absolute;
+		z-index: 11;
+	}
+	// .gallery__content
+	&__content {
+		display: flex;
+		justify-content: center;
+	}
+	// .gallery__text
+	&__text {
+		max-width: 360px;
+		color: $secondary-color;
+		position: relative;
+		left: 50%;
+	}
+	// .gallery__right
+	&__right {
+	}
+}
