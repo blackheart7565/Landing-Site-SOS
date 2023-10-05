@@ -4,3 +4,25 @@
 @mixin transition($selector, $delay: 0.2s) {
 	transition: $selector $delay ease-in-out;
 }
+
+// adaptation
+@mixin screenSize($max-width, $min-width: null) {
+	@if $min-width != null {
+		@media screen and (min-width: $min-width) and (max-width: $max-width) {
+			@content;
+		}
+	} @else {
+		@media screen and (max-width: $max-width) {
+			@content;
+		}
+	}
+}
+
+// background full screen
+@mixin mainBackground($url-img, $gradient-color) {
+	height: 100vh;
+	background: $gradient-color, url($url-img);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}

@@ -5,18 +5,16 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	height: 100vh;
-	background: radial-gradient(
+	@include mainBackground(
+		$feature-background-img,
+		radial-gradient(
 			81.01% 53.57% at 30.85% 53.65%,
 			rgba(255, 255, 255, 0) 0%,
 			rgba(0, 0, 0, 0) 19.2%,
 			rgba(4, 5, 6, 0.52) 47.48%,
 			#080a0b 99.74%
-		),
-		url($feature-background-img);
-	background-repeat: no-repeat;
-	background-position: 30%;
-	background-size: cover;
+		)
+	);
 
 	// .features__wrapper
 	&__wrapper {

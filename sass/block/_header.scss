@@ -5,17 +5,15 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 100vh;
-	background: radial-gradient(
+	@include mainBackground(
+		$header-background-img,
+		radial-gradient(
 			189.96% 61.18% at 50% 38.82%,
 			rgba(255, 181, 72, 0) 0%,
 			rgba(52, 44, 29, 0.8) 73.22%,
 			#08090a 99.74%
-		),
-		url($header-background-img);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+		)
+	);
 
 	// .header__top
 	&__top {
@@ -40,6 +38,10 @@
 	// .header__nav
 	&__nav {
 		height: 100%;
+
+		@include screenSize($size-tablet) {
+			display: none;
+		}
 	}
 	// .header__list
 	&__list {
@@ -94,6 +96,10 @@
 	&__gaming-services {
 		display: flex;
 		gap: 18px;
+
+		@include screenSize($size-tablet) {
+			display: none;
+		}
 	}
 	// .header__xbox
 	&__xbox {
@@ -142,17 +148,35 @@
 		text-transform: uppercase;
 		font-size: $title-size;
 		font-family: $font-famaly-bebas-neue;
-		letter-spacing: 7px;
+		font-weight: 400;
+		letter-spacing: 5px;
 		user-select: none;
+
+		@include screenSize($size-tablet) {
+			font-size: $tablet-title-size;
+		}
+		@include screenSize($size-mobile) {
+			font-size: $mobile-title-size;
+		}
 	}
 	// .header__subtext
 	&__subtext {
 		text-transform: uppercase;
 		font-size: $subtext-size;
 		font-family: $font-famaly-bebas-neue;
-		letter-spacing: 4px;
+		font-weight: 400;
+		letter-spacing: 3px;
 		margin-bottom: 30px;
 		user-select: none;
+
+		@include screenSize($size-tablet) {
+			font-size: $tablet-subtext-size;
+		}
+		@include screenSize($size-mobile) {
+			font-size: $mobile-subtext-size;
+			text-align: center;
+			width: 18rem;
+		}
 	}
 	// .header__btn
 	&__btn {
@@ -162,6 +186,10 @@
 		&:hover {
 			box-shadow: 0 0 10px $accent-color, 0 0 20px $accent-color,
 				0 0 30px $accent-color;
+		}
+
+		@include screenSize($size-mobile) {
+			font-size: calc($mobile-subtext-size - 1px);
 		}
 	}
 	// .header__text
