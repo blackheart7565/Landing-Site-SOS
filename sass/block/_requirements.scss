@@ -72,6 +72,9 @@
 			width: 90%;
 			margin-inline: auto;
 		}
+		@include screenSize($size-tablet) {
+			margin-top: -10%;
+		}
 	}
 	// .requirements__content-wrapper
 	&__content-wrapper {
@@ -83,31 +86,21 @@
 		height: 400px;
 		position: relative;
 		border: 1px solid #979797;
-		// background: #000;
-		// clip-path: polygon(
-		// 	0 0,
-		// 	100% 0,
-		// 	100% 94%,
-		// 	96% 100%,
-		// 	41% 100%,
-		// 	21% 100%,
-		// 	0 100%
-		// );
+
+		@include screenSize(1275px) {
+			width: 65%;
+			height: 80%;
+		}
 
 		@include screenSize($size-tablet) {
+			width: 75%;
+			height: 60%;
 		}
 		@include screenSize($size-mobile) {
-			// height: 300px;
+			width: 95%;
+			height: 80%;
 		}
 	}
-	// .requirements__frame
-	// &__frame {
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 570px;
-	// 	height: 400px;
-	// }
 	// .requirements__os
 	&__os {
 		// background: #af2727;
@@ -123,6 +116,7 @@
 		letter-spacing: 2px;
 
 		@include screenSize($size-tablet) {
+			font-size: 17px;
 		}
 		@include screenSize($size-mobile) {
 			font-size: 18px;
@@ -133,6 +127,7 @@
 		color: $secondary-color;
 
 		@include screenSize($size-tablet) {
+			font-size: 13px;
 		}
 		@include screenSize($size-mobile) {
 			font-size: 14px;

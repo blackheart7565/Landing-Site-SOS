@@ -34,4 +34,11 @@ body {
 	color: $main-color;
 	border-radius: 4px;
 	font-weight: 700;
+	border: none;
+	transition: box-shadow 0.2s ease-in-out;
+
+	&:hover {
+		box-shadow: 0 0 10px $accent-color, 0 0 20px $accent-color,
+			0 0 30px $accent-color;
+	}
 }

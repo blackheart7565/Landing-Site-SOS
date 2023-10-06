@@ -11,6 +11,7 @@ $button-text-size: 16px;
 $title-size: 80px;
 $subtext-size: 24px;
 $spoiler-title-size: 36px;
+$secondary-size: 14px;
 
 //colors
 $main-color: #1a1917;
@@ -23,12 +24,14 @@ $header-background-img: '../../assets/path/to/image/header/header-bg.jpg';
 $feature-background-img: '../../assets/path//to/image/main/features/features-bg.jpg';
 $gallery-background-img: '../../assets/path//to/image/main/gallery/image-bg-2.jpg';
 $requirements-background-img: '../../assets/path/to/image/main/requirements/image-bg-fullhd.jpg';
+$footer-background-img: '../../assets/path/to/image/footer/image.jpg';
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~> MEDIA <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 // screen-size
 $size-tablet: 960px;
 $size-mobile: 480px;
+$size-mobile-secondary: 550px;
 
 // font-size
 $mobile-title-size: 30px;

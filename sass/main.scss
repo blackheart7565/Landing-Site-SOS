@@ -14,10 +14,13 @@
 // Block
 @import './block/header';
 @import './block/gallery';
-@import './block/swiper';
 @import './block/features';
 @import './block/requirements';
-@import './block/menu-burger';
+@import './block/footer';
+
+//Block -> module
+@import './block/module/menu-burger';
+@import './block/module/swiper';
 
 // Animation
 @import './animation/header/index';

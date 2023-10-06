@@ -15,6 +15,20 @@
 			#080a0b 99.74%
 		)
 	);
+	@include screenSize($size-tablet) {
+		@include mainBackground(
+			$feature-background-img,
+			radial-gradient(
+				27.47% 64.87% at 11.45% 30.62%,
+				rgba(255, 255, 255, 0) 0%,
+				rgba(0, 0, 0, 0) 0%,
+				rgba(4, 5, 6, 0.329) 25.99%,
+				rgba(6, 7, 8, 0.74) 65.03%,
+				#080a0bdc 82.74%
+			)
+		);
+		background-position: 40%;
+	}
 
 	// .features__wrapper
 	&__wrapper {
@@ -22,6 +36,14 @@
 		width: 400px;
 		height: 430px;
 		margin-right: 17%;
+
+		@include screenSize($size-tablet) {
+			margin-right: 0;
+			width: 300px;
+		}
+		@include screenSize($size-mobile) {
+			width: 200px;
+		}
 	}
 	// .features__header
 	&__header {
@@ -39,6 +61,10 @@
 		font-size: $title-size;
 		color: $secondary-color;
 		letter-spacing: 3px;
+
+		@include screenSize($size-tablet) {
+			font-size: $tablet-title-size;
+		}
 	}
 	// .features__content
 	&__content {
@@ -98,6 +124,13 @@
 		letter-spacing: 2px;
 		font-weight: 400;
 		position: relative;
+
+		@include screenSize($size-tablet) {
+			font-size: calc($mobile-title-size - 10px);
+		}
+		@include screenSize($size-mobile) {
+			font-size: calc($mobile-title-size - 15px);
+		}
 	}
 	// .features__spoiler-text
 	&__spoiler-text {
@@ -109,6 +142,12 @@
 
 		& > p {
 			min-height: 0;
+		}
+		@include screenSize($size-tablet) {
+			font-size: calc($mobile-subtext-size - 5px);
+		}
+		@include screenSize($size-mobile) {
+			font-size: calc($mobile-subtext-size - 7px);
 		}
 	}
 }
