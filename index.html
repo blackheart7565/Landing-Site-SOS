@@ -19,7 +19,9 @@
 		<section class="header__top">
 			<div class="header__top--inner container">
 				<div class="header__logo">
-					<img class='header__logo--img' src="./assets/path/to/image/header/logo.png" alt="header-logo">
+					<a href="/" class="header__logo-link">
+						<img class='header__logo--img' src="./assets/path/to/image/header/logo.png" alt="header-logo">
+					</a>
 				</div>
 				<nav class='header__nav'>
 					<ul class="header__list">
@@ -41,12 +43,18 @@
 					</ul>
 				</nav>
 				<div class="header__controls">
-					<select class="header__language">
-						<option value="eng">eng</option>
-						<option value="rus">rus</option>
-						<option value="fra">fra</option>
-						<option value="deu">deu</option>
-					</select>
+					<div class='select'>
+						<div class="select__toggle" id='select-toggle'>
+							<span class="select__display" id='select-display'>eng</span>
+							<ion-icon class="select__arrow" name="chevron-down-outline"></ion-icon>
+						</div>
+						<ul class="select__list">
+							<li class="select__item">eng</li>
+							<li class="select__item">rus</li>
+							<li class="select__item">fra</li>
+							<li class="select__item">deu</li>
+						</ul>
+					</div>
 					<div class="header__gaming-services">
 						<a class="header__xbox" href="https://www.xbox.com/ru-RU">
 							<svg class="header__xbox-ico" width="31" height="31" viewBox="0 0 31 31" fill="none"
@@ -99,7 +107,7 @@
 	</header>
 
 	<main class='main '>
-		<section class='gallery off'>
+		<section class='gallery '>
 			<div class="gallery__left">
 				<header class="gallery__header">
 					<h3 class="gallery__subtext">What is SOS?</h3>
@@ -138,7 +146,6 @@
 				</div>
 			</div>
 		</section>
-
 		<section class='features '>
 			<div class="features__wrapper">
 				<div class="features__header">
@@ -182,7 +189,6 @@
 				</div>
 			</div>
 		</section>
-
 		<section class='requirements '>
 			<header class="requirements__header">
 				<h3 class="requirements__subtext">Can My Computer Run this game?</h3>
@@ -341,7 +347,8 @@
 		</div>
 	</footer>
 
-
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

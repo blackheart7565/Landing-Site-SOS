@@ -1,0 +1,120 @@
+//~~
+
+:root {
+	--main-color: #14023d;
+	--accent-color: #0cb3e6;
+	--transition: 0.2s ease-in-out;
+	--white: #fff;
+	--black: #000;
+	--dark: #333;
+}
+
+.select {
+	$self: &;
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: -10px;
+		width: 1px;
+		height: 100%;
+		background: rgba(255, 255, 255, 0.3490196078);
+	}
+
+	// .select__toggle
+	&__toggle {
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		background: transparent;
+		font-family: $font-famaly-open-sans;
+		color: $secondary-color;
+		text-transform: uppercase;
+		width: 86px;
+		height: 35px;
+		font-size: 14px;
+		user-select: none;
+		font-weight: 700;
+		padding: 10px 30px 10px 15px;
+		border-radius: 8px;
+		transition: background-color var(--transition), box-shadow var(--transition);
+
+		&:hover {
+			background: $accent-color;
+			box-shadow: 0 0 10px $accent-color, 0 0 20px $accent-color,
+				0 0 30px $accent-color;
+		}
+		&:hover #{$self}__display {
+			color: $main-color;
+		}
+		&:hover #{$self}__arrow {
+			color: $main-color;
+		}
+	}
+	// .select__arrow
+	&__arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 10px;
+		transition: color var(--transition), transform var(--transition);
+	}
+	// .select__display
+	&__display {
+		color: var(--white);
+		letter-spacing: 1px;
+		line-height: 15px;
+		transition: color var(--transition);
+	}
+	// .select__list
+	&__list {
+		position: absolute;
+		width: 86px;
+		overflow-y: auto;
+		color: var(--white);
+		margin-top: 7px;
+		border-radius: 8px;
+		list-style: none;
+		height: 0;
+		transition: height 0.5s ease-in-out;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	// .select__item
+	&__item {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		color: var(--white);
+		background: rgba(0, 0, 0, 0.75);
+		user-select: none;
+		width: 100%;
+		font-family: $font-famaly-open-sans;
+		font-weight: 400;
+		font-size: $secondary-size;
+		text-transform: uppercase;
+		height: 35px;
+		padding: 10px 30px 10px 15px;
+		transition: background-color var(--transition), color var(--transition);
+
+		&:hover {
+			color: $accent-color;
+		}
+	}
+
+	&-active &__arrow {
+		transform: rotate(180deg) translateY(50%);
+	}
+	&-active ~ &__list {
+		height: 140px;
+	}
+	&__item-active {
+		background: var(--accent-color);
+	}
+}

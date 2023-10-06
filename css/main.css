@@ -104,7 +104,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.header__logo > .header__logo--img {
+.header__logo-link .header__logo--img {
   height: 55px;
   width: 55px;
 }
@@ -145,19 +145,6 @@ body {
   display: flex;
   gap: 25px;
 }
-.header__language {
-  cursor: pointer;
-  width: 77px;
-  background: transparent;
-  border: none;
-  outline: none;
-  position: relative;
-  border-right: 0.5px solid rgba(255, 255, 255, 0.3490196078);
-  color: #d9d9d9;
-}
-.header__language > option {
-  color: #1a1917;
-}
 .header__gaming-services {
   display: flex;
   gap: 18px;
@@ -176,7 +163,7 @@ body {
   transition: box-shadow 0.2s ease-in-out;
 }
 .header__xbox:hover {
-  box-shadow: 0 0 10px #ffb548;
+  transform: scale(1.2);
   filter: contrast(110%);
 }
 .header__steam {
@@ -188,7 +175,7 @@ body {
   transition: box-shadow 0.2s ease-in-out;
 }
 .header__steam:hover {
-  box-shadow: 0 0 10px #ffb548;
+  transform: scale(1.2);
   filter: contrast(110%);
 }
 .header__center {
@@ -1033,6 +1020,116 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 100px;
+}
+
+:root {
+  --main-color: #14023d;
+  --accent-color: #0cb3e6;
+  --transition: 0.2s ease-in-out;
+  --white: #fff;
+  --black: #000;
+  --dark: #333;
+}
+
+.select {
+  position: relative;
+}
+.select:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 1px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3490196078);
+}
+.select__toggle {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background: transparent;
+  font-family: "Open Sans", sans-serif;
+  color: #d9d9d9;
+  text-transform: uppercase;
+  width: 86px;
+  height: 35px;
+  font-size: 14px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-weight: 700;
+  padding: 10px 30px 10px 15px;
+  border-radius: 8px;
+  transition: background-color var(--transition), box-shadow var(--transition);
+}
+.select__toggle:hover {
+  background: #ffb548;
+  box-shadow: 0 0 10px #ffb548, 0 0 20px #ffb548, 0 0 30px #ffb548;
+}
+.select__toggle:hover .select__display {
+  color: #1a1917;
+}
+.select__toggle:hover .select__arrow {
+  color: #1a1917;
+}
+.select__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  transition: color var(--transition), transform var(--transition);
+}
+.select__display {
+  color: var(--white);
+  letter-spacing: 1px;
+  line-height: 15px;
+  transition: color var(--transition);
+}
+.select__list {
+  position: absolute;
+  width: 86px;
+  overflow-y: auto;
+  color: var(--white);
+  margin-top: 7px;
+  border-radius: 8px;
+  list-style: none;
+  height: 0;
+  transition: height 0.5s ease-in-out;
+}
+.select__list::-webkit-scrollbar {
+  display: none;
+}
+.select__item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.75);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  height: 35px;
+  padding: 10px 30px 10px 15px;
+  transition: background-color var(--transition), color var(--transition);
+}
+.select__item:hover {
+  color: #ffb548;
+}
+.select-active .select__arrow {
+  transform: rotate(180deg) translateY(50%);
+}
+.select-active ~ .select__list {
+  height: 140px;
+}
+.select__item-active {
+  background: var(--accent-color);
 }
 
 @keyframes srollDownBtn {

@@ -27,14 +27,18 @@
 	}
 	// .header__logo
 	&__logo {
+		$self-logo: &;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		& > &--img {
-			height: 55px;
-			width: 55px;
+		&-link {
+			& #{$self-logo}--img {
+				height: 55px;
+				width: 55px;
+			}
 		}
 	}
+
 	// .header__nav
 	&__nav {
 		height: 100%;
@@ -78,21 +82,6 @@
 		display: flex;
 		gap: 25px;
 	}
-	// .header__language
-	&__language {
-		cursor: pointer;
-		width: 77px;
-		background: transparent;
-		border: none;
-		outline: none;
-		position: relative;
-		border-right: 0.5px solid #ffffff59;
-		color: $secondary-color;
-
-		& > option {
-			color: $main-color;
-		}
-	}
 	// .header__gaming-services
 	&__gaming-services {
 		display: flex;
@@ -112,7 +101,7 @@
 		transition: box-shadow 0.2s ease-in-out;
 
 		&:hover {
-			box-shadow: 0 0 10px $accent-color;
+			transform: scale(1.2);
 			filter: contrast(110%);
 		}
 	}
@@ -129,7 +118,7 @@
 		transition: box-shadow 0.2s ease-in-out;
 
 		&:hover {
-			box-shadow: 0 0 10px $accent-color;
+			transform: scale(1.2);
 			filter: contrast(110%);
 		}
 	}
