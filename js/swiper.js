@@ -2,6 +2,7 @@ export const initializationSwiper = nameSliderContainer => {
 	new Swiper(nameSliderContainer, {
 		effect: 'coverflow',
 		grabCursor: true,
+		speed: 200,
 		centeredSlides: true,
 		loop: true,
 		slidesPerView: 'auto',

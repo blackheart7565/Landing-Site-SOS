@@ -1,6 +1,8 @@
 //~~
 
 .swiper {
+	// width: 100%;
+
 	&__container {
 		display: flex;
 		justify-content: center;
@@ -8,6 +10,10 @@
 		// max-width: 400px;
 		max-width: 600px;
 		padding: 40px 0;
+
+		@include screenSize(1460px) {
+			max-width: 500px;
+		}
 	}
 
 	&__card {
@@ -16,6 +22,11 @@
 		width: 500px;
 		height: 600px;
 		position: relative;
+
+		@include screenSize(1460px) {
+			width: 400px !important;
+			height: 500px !important;
+		}
 	}
 
 	&-slide img {

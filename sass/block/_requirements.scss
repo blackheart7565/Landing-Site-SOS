@@ -1,0 +1,166 @@
+//~~
+
+.requirements {
+	display: flex;
+	flex-direction: column;
+	@include mainBackground(
+		$requirements-background-img,
+		radial-gradient(
+			50% 49.23% at 64.32% 47.1%,
+			rgba(255, 255, 255, 0) 3.36%,
+			rgba(0, 0, 0, 0) 19.22%,
+			#080a0b 99.74%
+		)
+	);
+
+	// .requirements__header
+	&__header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	// .requirements__subtext
+	&__subtext {
+		font-size: $subtext-size;
+		font-family: $font-famaly-bebas-neue;
+		color: $secondary-color;
+		font-weight: 400;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		margin-top: 145px;
+
+		@include screenSize($size-tablet) {
+			font-size: $tablet-subtext-size;
+		}
+		@include screenSize($size-mobile) {
+			font-size: $mobile-subtext-size;
+			text-align: center;
+			width: 18rem;
+		}
+	}
+	// .requirements__title
+	&__title {
+		font-size: $title-size;
+		font-family: $font-famaly-bebas-neue;
+		color: $secondary-color;
+		font-weight: 400;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+
+		@include screenSize($size-tablet) {
+			font-size: $tablet-title-size;
+		}
+		@include screenSize($size-mobile) {
+			font-size: $mobile-title-size;
+		}
+	}
+	// .requirements__content
+	&__content {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		padding-left: 120px;
+
+		@include screenSize($size-tablet) {
+			justify-content: center;
+			padding-left: 0;
+		}
+		@include screenSize($size-mobile) {
+			margin-top: -50%;
+			width: 90%;
+			margin-inline: auto;
+		}
+	}
+	// .requirements__content-wrapper
+	&__content-wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		// align-items: center;
+		width: 570px;
+		height: 400px;
+		position: relative;
+		border: 1px solid #979797;
+		// background: #000;
+		// clip-path: polygon(
+		// 	0 0,
+		// 	100% 0,
+		// 	100% 94%,
+		// 	96% 100%,
+		// 	41% 100%,
+		// 	21% 100%,
+		// 	0 100%
+		// );
+
+		@include screenSize($size-tablet) {
+		}
+		@include screenSize($size-mobile) {
+			// height: 300px;
+		}
+	}
+	// .requirements__frame
+	// &__frame {
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	width: 570px;
+	// 	height: 400px;
+	// }
+	// .requirements__os
+	&__os {
+		// background: #af2727;
+		padding-top: 15px;
+		padding-left: 20px;
+	}
+	// .requirements__name
+	&__name {
+		font-family: $font-famaly-bebas-neue;
+		font-size: $subtext-size;
+		color: $accent-color;
+		font-weight: 400;
+		letter-spacing: 2px;
+
+		@include screenSize($size-tablet) {
+		}
+		@include screenSize($size-mobile) {
+			font-size: 18px;
+		}
+	}
+	// .requirements__description
+	&__description {
+		color: $secondary-color;
+
+		@include screenSize($size-tablet) {
+		}
+		@include screenSize($size-mobile) {
+			font-size: 14px;
+		}
+	}
+	// .requirements__processor
+	&__processor {
+		// background: #74af27d3;
+		padding-top: 15px;
+		padding-left: 20px;
+	}
+	// .requirements__memory
+	&__memory {
+		// background: #2794af;
+		padding-top: 15px;
+		padding-left: 20px;
+	}
+	// .requirements__storage
+	&__storage {
+		// background: #af27af;
+		padding-top: 15px;
+		padding-left: 20px;
+	}
+	// .requirements__graphics
+	&__graphics {
+		// background: #a6af27;
+		grid-column-start: 1;
+		grid-column-end: 3;
+		padding-left: 20px;
+	}
+}

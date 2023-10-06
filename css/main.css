@@ -294,6 +294,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  position: relative;
   height: 100vh;
   background: radial-gradient(136.03% 54.57% at 50% 48.04%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 60.63%, #080a0b 99.74%), url("../../assets/path//to/image/main/gallery/image-bg-2.jpg");
   background-repeat: no-repeat;
@@ -307,7 +308,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  right: -15%;
+  left: 10%;
 }
 .gallery__subtext {
   font-family: "Bebas Neue", sans-serif;
@@ -347,10 +348,21 @@ body {
   max-width: 600px;
   padding: 40px 0;
 }
+@media screen and (max-width: 1460px) {
+  .swiper__container {
+    max-width: 500px;
+  }
+}
 .swiper__card {
   width: 500px;
   height: 600px;
   position: relative;
+}
+@media screen and (max-width: 1460px) {
+  .swiper__card {
+    width: 400px !important;
+    height: 500px !important;
+  }
 }
 .swiper-slide img {
   width: 100%;
@@ -456,6 +468,131 @@ body {
 }
 .features__spoiler-text > p {
   min-height: 0;
+}
+
+.requirements {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: radial-gradient(50% 49.23% at 64.32% 47.1%, rgba(255, 255, 255, 0) 3.36%, rgba(0, 0, 0, 0) 19.22%, #080a0b 99.74%), url("../../assets/path/to/image/main/requirements/image-bg-fullhd.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.requirements__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.requirements__subtext {
+  font-size: 24px;
+  font-family: "Bebas Neue", sans-serif;
+  color: #d9d9d9;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 145px;
+}
+@media screen and (max-width: 960px) {
+  .requirements__subtext {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .requirements__subtext {
+    font-size: 18px;
+    text-align: center;
+    width: 18rem;
+  }
+}
+.requirements__title {
+  font-size: 80px;
+  font-family: "Bebas Neue", sans-serif;
+  color: #d9d9d9;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 960px) {
+  .requirements__title {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .requirements__title {
+    font-size: 30px;
+  }
+}
+.requirements__content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-left: 120px;
+}
+@media screen and (max-width: 960px) {
+  .requirements__content {
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .requirements__content {
+    margin-top: -50%;
+    width: 90%;
+    margin-inline: auto;
+  }
+}
+.requirements__content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 570px;
+  height: 400px;
+  position: relative;
+  border: 1px solid #979797;
+}
+.requirements__os {
+  padding-top: 15px;
+  padding-left: 20px;
+}
+.requirements__name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  color: #ffb548;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 480px) {
+  .requirements__name {
+    font-size: 18px;
+  }
+}
+.requirements__description {
+  color: #d9d9d9;
+}
+@media screen and (max-width: 480px) {
+  .requirements__description {
+    font-size: 14px;
+  }
+}
+.requirements__processor {
+  padding-top: 15px;
+  padding-left: 20px;
+}
+.requirements__memory {
+  padding-top: 15px;
+  padding-left: 20px;
+}
+.requirements__storage {
+  padding-top: 15px;
+  padding-left: 20px;
+}
+.requirements__graphics {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding-left: 20px;
 }
 
 .menu-burger__btn {
