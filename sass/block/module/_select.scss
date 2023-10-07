@@ -115,6 +115,8 @@
 		height: 140px;
 	}
 	&__item-active {
-		background: var(--accent-color);
+		background: $accent-color;
+		color: $main-color;
+		font-weight: 700;
 	}
 }

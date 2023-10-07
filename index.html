@@ -15,8 +15,8 @@
 
 <body>
 
-	<header class='header '>
-		<section class="header__top">
+	<header class='header' id='header'>
+		<div class="header__top">
 			<div class="header__top--inner container">
 				<div class="header__logo">
 					<a href="/" class="header__logo-link">
@@ -76,13 +76,12 @@
 							</svg>
 						</a>
 					</div>
-					<button class='menu-burger__btn'>
+					<button class='menu-burger__btn-open' id='menu-burger-open'>
 						<span></span>
 					</button>
 				</div>
-
 			</div>
-		</section>
+		</div>
 		<section class='header__center'>
 			<h1 class='header__title'>survive at all costs</h1>
 			<h3 class='header__subtext'>Experience new social battle royale game</h3>
@@ -91,7 +90,7 @@
 				<span class="header__cost">$14.99</span>
 			</a>
 		</section>
-		<section class='header__buttom'>
+		<div class='header__buttom'>
 			<button class="header__scroll-down-btn">
 				<p class='header__scroll-down--text'>
 					The story
@@ -103,11 +102,11 @@
 					</svg>
 				</div>
 			</button>
-		</section>
+		</div>
 	</header>
 
-	<main class='main '>
-		<section class='gallery off'>
+	<main class='main'>
+		<section class='gallery off' id='gallery'>
 			<div class="gallery__left">
 				<header class="gallery__header">
 					<h3 class="gallery__subtext">What is SOS?</h3>
@@ -146,7 +145,7 @@
 				</div>
 			</div>
 		</section>
-		<section class='features '>
+		<section class='features' id='features'>
 			<div class="features__wrapper">
 				<div class="features__header">
 					<div class="features__subtext">What’s so special?</div>
@@ -189,7 +188,7 @@
 				</div>
 			</div>
 		</section>
-		<section class='requirements '>
+		<section class='requirements' id='requirements'>
 			<header class="requirements__header">
 				<h3 class="requirements__subtext">Can My Computer Run this game?</h3>
 				<h1 class="requirements__title">system requirements</h1>
@@ -228,7 +227,7 @@
 				</div>
 			</main>
 		</section>
-		<section class='press-quotes'>
+		<section class='press-quotes' id='press-quotes'>
 			<div class="press-quotes__container container">
 				<div class="press-quotes__left">
 					<div class="press-quotes__header">
@@ -327,17 +326,14 @@
 		</section>
 	</main>
 
-	<footer class='footer '>
+	<footer class='footer' id='footer'>
 		<div class="footer__container container">
-
 			<div class="footer__content">
-
 				<div class="footer__content-left">
 					<div class="footer__img-container">
 						<img class='footer__img' src="./assets/path/to/image/footer/image.jpg" alt="footer-image">
 					</div>
 				</div>
-
 				<div class="footer__content-right">
 
 					<form class="footer__form">
@@ -368,12 +364,11 @@
 
 				</div>
 			</div>
-
 			<div class="footer__navigation">
 				<div class="footer__navigation--top">
-					<div class="footer__logo">
+					<a class="footer__logo" href='/'>
 						<img class='footer__logo-img' src="./assets/path/to/image/header/logo.png" alt="header-logo">
-					</div>
+					</a>
 					<nav class='footer__nav'>
 						<ul class="footer__list">
 							<li class="footer__item">
@@ -444,6 +439,30 @@
 		</div>
 	</footer>
 
+	<div class="menu-burger" id='menu-burger'>
+		<button class='menu-burger__btn-close' id='menu-burger-close'>
+			<span></span>
+		</button>
+		<nav class='menu-burger__nav'>
+			<ul class="menu-burger__list">
+				<li class="menu-burger__item">
+					<a href="#" class="menu-burger__link">main</a>
+				</li>
+				<li class="menu-burger__item">
+					<a href="#" class="menu-burger__link">about</a>
+				</li>
+				<li class="menu-burger__item">
+					<a href="#" class="menu-burger__link">game feature</a>
+				</li>
+				<li class="menu-burger__item">
+					<a href="#" class="menu-burger__link">system requirements</a>
+				</li>
+				<li class="menu-burger__item">
+					<a href="#" class="menu-burger__link">quotes</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
