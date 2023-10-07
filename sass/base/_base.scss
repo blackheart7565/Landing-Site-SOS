@@ -42,3 +42,11 @@ body {
 			0 0 30px $accent-color;
 	}
 }
+
+.title {
+	@include titleAndSubtext($title-size, 3px);
+}
+
+.subtext {
+	@include titleAndSubtext($subtext-size, 2px);
+}

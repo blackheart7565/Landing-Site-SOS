@@ -16,18 +16,30 @@
 		)
 	);
 	@include screenSize($size-tablet) {
+		// @include mainBackground(
+		// 	$feature-background-img,
+		// 	radial-gradient(
+		// 		27.47% 64.87% at 11.45% 30.62%,
+		// 		rgba(255, 255, 255, 0) 0%,
+		// 		rgba(0, 0, 0, 0) 0%,
+		// 		rgba(4, 5, 6, 0.329) 25.99%,
+		// 		rgba(6, 7, 8, 0.74) 65.03%,
+		// 		#080a0bdc 82.74%
+		// 	)
+		// );
+		// background-position: 35%;
 		@include mainBackground(
 			$feature-background-img,
 			radial-gradient(
-				27.47% 64.87% at 11.45% 30.62%,
+				47.47% 50.87% at 18.45% 34.62%,
 				rgba(255, 255, 255, 0) 0%,
 				rgba(0, 0, 0, 0) 0%,
-				rgba(4, 5, 6, 0.329) 25.99%,
-				rgba(6, 7, 8, 0.74) 65.03%,
-				#080a0bdc 82.74%
+				rgba(4, 5, 6, 0.39) 45.99%,
+				rgba(7, 8, 8, 0.705) 55.03%,
+				#0d0f0fe0 92.74%
 			)
 		);
-		background-position: 40%;
+		background-position: 35%;
 	}
 
 	// .features__wrapper

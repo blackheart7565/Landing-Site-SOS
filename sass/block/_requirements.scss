@@ -12,6 +12,19 @@
 			#080a0b 99.74%
 		)
 	);
+	@include screenSize($size-mobile) {
+		@include mainBackground(
+			$requirements-background-img,
+			radial-gradient(
+				18.35% 22.39% at 50.49% 75.05%,
+				rgba(255, 255, 255, 0) 3.36%,
+				rgba(0, 0, 0, 0) 46.19%,
+				#080a0b 100%
+			)
+		);
+		background-position: center 130%;
+		background-size: 300%;
+	}
 
 	// .requirements__header
 	&__header {
@@ -68,12 +81,12 @@
 			padding-left: 0;
 		}
 		@include screenSize($size-mobile) {
-			margin-top: -50%;
+			margin-top: 10%;
 			width: 90%;
 			margin-inline: auto;
 		}
 		@include screenSize($size-tablet) {
-			margin-top: -10%;
+			// margin-top: 10%;
 		}
 	}
 	// .requirements__content-wrapper
@@ -81,7 +94,6 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(3, 1fr);
-		// align-items: center;
 		width: 570px;
 		height: 400px;
 		position: relative;

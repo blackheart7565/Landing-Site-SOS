@@ -20,9 +20,20 @@
 
 // background full screen
 @mixin mainBackground($url-img, $gradient-color) {
-	height: 100vh;
+	// height: 100vh;
+	min-height: 100vh;
 	background: $gradient-color, url($url-img);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+
+// styles title and subtext
+@mixin titleAndSubtext($font-size, $letter-spacing) {
+	font-family: $font-famaly-bebas-neue;
+	color: $secondary-color;
+	font-size: $font-size;
+	letter-spacing: $letter-spacing;
+	text-transform: uppercase;
+	font-weight: 400;
 }
