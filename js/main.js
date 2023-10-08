@@ -19,7 +19,6 @@ window.addEventListener('scroll', () => {
 	} else {
 		headerTop.classList.remove('scroll-top-header')
 	}
-	// console.log(top, bottom)
 })
 
 initializationSwiper('.swiper__content')
