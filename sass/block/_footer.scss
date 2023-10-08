@@ -2,7 +2,7 @@
 
 .footer {
 	$self: &;
-	height: 100vh;
+	min-height: 100vh;
 	background: $footer-bg-color;
 	@include screenSize($size-tablet) {
 		height: 100%;
@@ -13,9 +13,9 @@
 
 	// .footer__container
 	&__container {
-		display: flex;
-		flex-direction: column;
-		height: 100%;
+		display: grid;
+		grid-template-rows: auto 233px;
+		min-height: 100vh;
 	}
 	// .footer__content
 	&__content {

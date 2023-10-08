@@ -828,7 +828,7 @@ body {
 }
 
 .footer {
-  height: 100vh;
+  min-height: 100vh;
   background: #080a0b;
 }
 @media screen and (max-width: 960px) {
@@ -842,9 +842,9 @@ body {
   }
 }
 .footer__container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  display: grid;
+  grid-template-rows: auto 233px;
+  min-height: 100vh;
 }
 .footer__content {
   display: grid;
