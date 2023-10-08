@@ -13,8 +13,9 @@
 
 	// .footer__container
 	&__container {
-		display: grid;
-		grid-template-rows: auto 233px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		min-height: 100vh;
 	}
 	// .footer__content
@@ -172,7 +173,7 @@
 	}
 	// .footer__navigation
 	&__navigation {
-		height: 233px;
+		height: 200px;
 		@include screenSize($size-tablet) {
 			height: 60%;
 			margin-top: 50px;
